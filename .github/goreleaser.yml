@@ -7,11 +7,6 @@ before:
 checksum:
   name_template: 'checksums.txt'
 
-snapshot:
--
-  name_template: "notion2sen_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-  format: zip
-
 changelog:
   sort: asc
   filters:
