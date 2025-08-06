@@ -63,14 +63,6 @@ func main() {
 
 	//
 
-	if cfg.Microsoft.UpdateTable {
-		if err := sentinel.CreateTable(ctx, logger, cfg.Microsoft.RetentionDays); err != nil {
-			logger.WithError(err).Fatal("failed to create MS Sentinel table")
-		}
-	}
-
-	//
-
 	logger.WithField("lookback", lookback).Info("Retrieving Notion logs")
 
 	logs, err := notionClient.GetAuditLogs(lookback)

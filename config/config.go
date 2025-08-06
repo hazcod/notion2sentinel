@@ -39,9 +39,6 @@ type Config struct {
 
 		ResourceGroup string `yaml:"resource_group" env:"MS_RSG_ID" valid:"minstringlength(3)"`
 		WorkspaceName string `yaml:"workspace_name" env:"MS_WS_NAME" valid:"minstringlength(3)"`
-
-		RetentionDays uint32 `yaml:"retention_days" env:"MS_RETENTION_DAYS"`
-		UpdateTable   bool   `yaml:"update_table" env:"MS_UPDATE_TABLE"`
 	} `yaml:"microsoft"`
 }
 
